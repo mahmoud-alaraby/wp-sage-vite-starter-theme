@@ -4,8 +4,7 @@
       {!! $title !!}
     </h1>
 
-    @include('partials.entry-meta')
-  </header>
+   </header>
 
   <div class="e-content">
     @php(the_content())

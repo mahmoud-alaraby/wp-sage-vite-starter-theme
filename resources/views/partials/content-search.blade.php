@@ -5,8 +5,6 @@
         {!! $title !!}
       </a>
     </h2>
-
-    @includeWhen(get_post_type() === 'post', 'partials.entry-meta')
   </header>
 
   <div class="entry-summary">
