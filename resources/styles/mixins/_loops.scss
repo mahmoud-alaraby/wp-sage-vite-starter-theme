@@ -1,0 +1,186 @@
+@use 'sass:map';
+@use 'sass:math';
+
+:root {
+    @each $name, $color in $colors {
+        --color-#{"#{$name}"}: #{$color};
+    }
+}
+
+@each $name, $value in $colors {
+    .bg-#{"#{$name}"} {
+ background-color: $value;
+}
+
+.text-#{"#{$name}"} {
+ color: $value;
+}
+
+.border-#{"#{$name}"} {
+ border-color: $value;
+}
+}
+
+@each $key, $value in $fonts {
+    .font-#{$key} {
+        font-size: #{$value}px !important;
+
+        @media only screen and (max-width: 767px) {
+            font-size: #{$value * 0.75}px;
+        }
+    }
+
+    .line-height-#{$key} {
+        line-height: #{$value}px;
+
+        @media only screen and (max-width: 767px) {
+            line-height: #{$value * 0.75}px;
+        }
+    }
+
+    .gap-#{$key} {
+        gap: #{$value}px;
+    }
+
+    .left-#{$key} {
+        left: #{$value}px;
+        right: auto;
+
+        [dir="rtl"] & {
+            right: #{$value}px;
+            left: auto;
+        }
+    }
+
+    .top-#{$key} {
+        top: #{$value}px;
+    }
+
+    .right-#{$key} {
+        right: #{$value}px;
+        left: auto;
+
+        [dir="rtl"] & {
+            left: #{$value}px;
+            right: auto;
+        }
+    }
+
+    .bottom-#{$key} {
+        bottom: #{$value}px;
+
+        [dir="rtl"] & {
+            bottom: #{$value}px;
+        }
+    }
+
+    .spacer-#{$key} {
+        display: block;
+        min-height: #{$value}px;
+
+        @media only screen and (max-width: 767px) {
+            min-height: #{$value  * 0.65}px;
+        }
+
+        &.keep {
+            @media only screen and (max-width: 767px) {
+                height: #{$value}px;
+                min-height: #{$value}px;
+            }
+        }
+    }
+}
+
+@each $key, $value in $spacing {
+    .spacing-#{$key} {
+        height: #{$value}px;
+
+        @media only screen and (max-width: 767px) {
+            height: #{$value  * 0.65}px;
+        }
+
+
+    }
+
+    .spacing-p-#{$key} {
+        padding: #{$value}px !important;
+
+        @media screen and (max-width: 576px) {
+            padding: math.div($value, 2)px !important;
+        }
+    }
+
+    .spacing-pl-#{$key} {
+        padding-left: #{$value}px;
+    }
+
+    .spacing-pr-#{$key} {
+        padding-right: #{$value}px;
+    }
+
+    .spacing-px-#{$key} {
+        padding: 0 #{$value}px;
+    }
+
+    .spacing-py-#{$key} {
+        padding: #{$value}px 0;
+    }
+
+    .spacing-pxs-#{$key} {
+        padding-inline-start: #{$value}px;
+    }
+
+    .spacing-pxe-#{$key} {
+        padding-inline-end: #{$value}px;
+    }
+
+    .spacing-pys-#{$key} {
+        padding-block-start: #{$value}px;
+    }
+
+    .spacing-pye-#{$key} {
+        padding-block-end: #{$value}px;
+    }
+
+    .spacing-m-#{$key} {
+        margin: #{$value}px;
+    }
+
+    .spacing-ml-#{$key} {
+        margin-left: #{$value}px;
+    }
+
+    .spacing-mr-#{$key} {
+        margin-right: #{$value}px;
+    }
+
+    .spacing-my-#{$key} {
+        margin: #{$value}px 0;
+    }
+
+    .spacing-mx-#{$key} {
+        margin: 0 #{$value}px;
+    }
+
+    .spacing-mxs-#{$key} {
+        margin-inline-start: #{$value}px;
+    }
+
+    .spacing-mxe-#{$key} {
+        margin-inline-end: #{$value}px;
+    }
+
+    .spacing-mys-#{$key} {
+        margin-block-start: #{$value}px;
+    }
+
+    .spacing-mye-#{$key} {
+        margin-block-end: #{$value}px;
+    }
+}
+
+@each $key, $value in $weights {
+    .fw-#{$key} {
+        font-weight: #{$value} !important;
+    }
+}
