@@ -21,6 +21,7 @@
  */
 
 use function Roots\bootloader;
+include 'framework/index.php';
 
 /*
 |--------------------------------------------------------------------------
