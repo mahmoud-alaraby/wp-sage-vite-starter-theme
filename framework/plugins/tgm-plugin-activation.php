@@ -73,20 +73,6 @@ function my_theme_register_required_plugins()
             'external_url' => 'https://github.com/TimPerry/acf-post-type-selector.git', // If set, overrides default API URL and points to an external URL.
         ),
         array(
-            'name' => 'Gravity Forms',
-            'slug' => 'gravityforms-develop',
-            'source' => 'https://github.com/wp-premium/gravityforms/archive/master.zip', // The plugin source.
-            'required' => true,
-            'external_url' => 'https://github.com/wp-premium/gravityforms',
-        ),
-        array(
-            'name' => 'Advanced Custom Fields: Gravity Forms Add-on',
-            'slug' => 'acf-gravityforms-add-on',
-            'source' => 'https://downloads.wordpress.org/plugin/acf-gravityforms-add-on.1.3.5.zip',
-            'required' => true,
-            'external_url' => 'https://wordpress.org/plugins/acf-gravityforms-add-on', // If set, overrides default API URL and points to an external URL.
-        ),
-        array(
             'name' => 'Download Advanced Custom Fields: Font Awesome Field',
             'slug' => 'advanced-custom-fields-font-awesome',
             'source' => 'https://downloads.wordpress.org/plugin/advanced-custom-fields-font-awesome.4.0.5.zip',

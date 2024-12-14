@@ -8,4 +8,8 @@
         &LessLess; &sol; &GreaterGreater;
     </h1>
 
+    <div class="main-img">
+        <img src="{{asset('main.jpg')}}" alt="">
+    </div>
+
 </div>
